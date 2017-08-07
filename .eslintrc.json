@@ -1,8 +1,19 @@
 {
     "env": {
-        "browser": true
+        "browser": true,
+        "es6": true
     },
     "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
     "rules": {
         "indent": [
             "error",
@@ -13,12 +24,15 @@
             "unix"
         ],
         "quotes": [
-            "warn",
-            "double"
+            "off",
+            "single"
         ],
         "semi": [
-            "error",
+            "warn",
             "always"
+        ],
+        "no-unused-vars": [
+          "off"
         ]
     }
 }
